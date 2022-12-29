@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>ALTICCI </h1>
+  <h3>SEQUENCE CALCULATION</h3>
+
+  <div class="form-container">
+    <h1>{{reltValue}}</h1>
+    <mat-form-field color="warn">
+      <mat-label>Compute</mat-label>
+      <input matInput type="text" [(ngModel)]="value">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button color="warn" (click)="submitCalculation()" disabled="{{laoding===true}}">Submit</button>
+    <i class="fa fa-spinner fa-spin" style="font-size:100px;color:red" *ngIf="laoding"></i>
+  </div>
+</div>
+
+

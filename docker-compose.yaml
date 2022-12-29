@@ -1,0 +1,23 @@
+version: "3.0"
+services:
+  alticci-api:
+    build: .
+    image: alticci-api
+    container_name: alticci-api
+    ports:
+      - "8080:8080"
+    networks:
+      - alticci_network
+  altice-ui:
+    build: ./alticci-ui
+    image: alticci-ui
+    container_name: alticci-ui
+    depends_on:
+      - alticci-api
+    ports:
+      - "80:80"
+    networks:
+      - alticci_network
+networks:
+  alticci_network:
+    driver: bridge
