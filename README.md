@@ -19,7 +19,7 @@ Maven 3.8.6
 
 You can run the application api in dev mode that enables live coding using:
 ```shell script
-./mvnw compile quarkus:dev
+mvn compile quarkus:dev
 ```
 
 > **_NOTE:_**  Quarkus API app is available in dev mode only at http://localhost:8080/q/dev/ and swagger will be available at http://localhost:8080/q/swagger-ui
